@@ -1,0 +1,502 @@
+body{
+    background: linear-gradient(153deg,#000004,#37044a,#0b013c);
+    background-size: 180% 180%;
+    animation: gradient-animation 2s ease infinite;
+    color: white;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+#header-div {
+    width: 100%;
+    padding: 10px 0; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(226, 49, 182, 0.1); 
+}
+
+
+.top-nav {
+    display: flex;
+   
+}
+
+.top-nav a {
+    color: #ffffff;
+    padding: 14px 20px; 
+    text-decoration: none; 
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    margin: 0 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.top-nav a:hover {
+    background-color: #5e1d6e; 
+    color: #ea00ff; 
+}
+
+
+@media (max-width: 768px) {
+    .top-nav a {
+        padding: 10px 15px; 
+        font-size: 16px; 
+    }
+}
+
+h3{
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+}
+.body-div{
+    display: inline-grid;
+
+}
+.details{
+    display: flex;
+}
+#nameCard{
+    margin-top: 5%;
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    object-fit: contain;
+}
+#name{
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 500%;
+    animation: 
+    typing 1.5s steps(40, end),
+    blink-caret .35s step-end infinite;
+}
+#goal{
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: lighter;
+    font-size: 200%;
+    animation: 
+    typing 1.5s steps(40, end),
+    blink-caret .35s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+#profilePicture{
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+}
+#pic {
+    margin-left: 25%;
+    height: 800px;
+    transition: all 0.4s;
+    transform: translateX(0px) translateY(0px) perspective(905px) rotateX(0deg) rotateY(0deg) rotateZ(-8deg);
+}
+
+#pic:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+@media (max-width: 1200px) {
+    #pic {
+        height: 600px;
+        margin-left: 20%;
+    }
+    #name {
+        font-size: 400%;
+    }
+    #goal {
+        font-size: 180%;
+    }
+}
+
+@media (max-width: 768px) {
+    #pic {
+        height: 400px;
+        margin-left: 10%;
+        transform: rotateZ(0deg);
+    }
+    #name {
+        font-size: 300%;
+    }
+    #goal {
+        font-size: 150%;
+    }
+}
+
+@media (max-width: 480px) {
+    #pic {
+        height: 250px;
+        margin-left: 5%;
+        transform: none;
+    }
+    #name {
+        font-size: 200%;
+    }
+    #goal {
+        font-size: 120%;
+    }
+}
+#profile{
+    width: auto;
+    height: auto;
+}
+#info{
+    width: 50%;
+    overflow: hidden;
+    margin-left: 10px;
+}
+.cardPart{
+    float: right;
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.container .glass {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    font-size: 20px;
+    padding: 10px;
+    width: 30%;
+    height: 400px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgb(97, 0, 124);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    border-radius: 10px;
+    margin: 0 -100px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+}
+
+.container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 10px;
+}
+
+.container .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.container .glass svg {
+    font-size: 2.5em;
+    fill: #fff;
+}
+#techUsed{
+    margin-top: 200px;
+}
+#techContainer{
+    opacity: 0;
+}
+
+ul {
+    font-size: 30px;
+    font-weight: 800;
+    list-style: none; 
+    padding: 0;
+    color: whitesmoke;
+    text-shadow: 3px 3px 9px rgba(23, 72, 128, 1);
+}
+.heading{
+    display: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 100px;
+    font-size: 250%;
+}
+.vert{
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+    box-shadow: 0px 0px 30px 7px rgba(217, 227, 153, 0.3);
+    border: 1px solid rgb(238, 228, 13);
+}
+#pre-school {
+    position: inherit;
+    font-size: 26px;
+    padding: 10px;
+    height: 400px;
+    width: auto;
+    margin-top: 200px;
+
+}
+.logo-container{
+    margin-top: auto;
+    text-align: center;
+}
+img{
+    margin-top: auto;
+    width: auto;
+    height: 400px;
+}
+#elementary{
+    margin-top: 200px;
+    position: inherit;
+    font-size: 26px;
+    padding: 10px;
+    height: 400px;
+    width: auto;
+}
+#line2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+#educBackground{
+    margin-top: 200px;
+}
+#jhs{
+    margin-top: 200px;
+    position: inherit;
+    font-size: 26px;
+    padding: 10px;
+    height: 400px;
+    width: auto;
+}
+#line3{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+#line4{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+#shs{
+    margin-top: 200px;
+    position: inherit;
+    font-size: 26px;
+    padding: 10px;
+    height: 400px;
+    width: auto;
+}
+#line5{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+#college{
+    margin-top: 200px;
+    position: inherit;
+    font-size: 26px;
+    padding: 10px;
+    height: 400px;
+    width: auto;
+}
+#fu{
+    height: 370px;
+}
+ 
+.login {
+    margin-top: 10%;
+    z-index: 1000;
+    display: none;
+    width: 300px;
+    height: max-content;
+    background: transparent;
+    border: #ffffff solid 2px;
+    padding: 47px;
+    padding-bottom: 57px;
+    color: #fff;
+    border-radius: 17px;
+    padding-bottom: 50px;
+    font-size: 1.3em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .login input[type="text"],
+  .login input[type="password"] {
+    opacity: 1;
+    display: block;
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 13px 18px;
+    margin: 20px 0 0 0;
+    font-size: 0.8em;
+    border-radius: 100px;
+    background: transparent;
+    border: #ffffff solid 2px;
+    color: #ffffff;
+  }
+  
+  .login input:focus {
+    animation: bounce 1s;
+    -webkit-appearance: none;
+  }
+  
+  .login input[type=submit],
+  .login input[type=button],
+  .h1 {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 13px;
+    margin: 40px 0 0 0;
+    border-radius: 500px;
+    font-weight: 600;
+    animation: bounce2 1.6s;
+  }
+  
+  .h1 {
+    font-weight: bolder;
+    padding: 0;
+    position: relative;
+    top: -35px;
+    display: block;
+    margin-bottom: -0px;
+    font-size: 1.6em;
+  }
+  
+  .btn {
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    color: #fff;
+    padding: 16px !important;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(144deg, #1e1e1e , 20%,#1e1e1e 50%,#1e1e1e );
+    color: rgb(255, 255, 255);
+    padding: 16px !important;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  .login input[type=text] {
+    animation: bounce 1s;
+    -webkit-appearance: none;
+  }
+  
+  .login input[type=password] {
+    animation: bounce1 1.3s;
+  }
+  
+  .ui {
+    font-weight: bolder;
+    background: -webkit-linear-gradient(#B563FF, #535EFC, #0EC8EE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(0.25turn, #535EFC, #0EC8EE, #0EC8EE);
+    border-image-slice: 1;
+    display: inline;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .login {
+      width: 70%;
+      padding: 3em;
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(-250px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes bounce1 {
+    0% {
+      opacity: 0;
+    }
+  
+    40% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes bounce2 {
+    0% {
+      opacity: 0;
+    }
+  
+    70% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }
+  #preContainer{
+    opacity: 0;
+  }
+  #elemContainer{
+    opacity: 0;
+  }
+  #jhsContainer{
+    opacity: 0;
+  }
+  #shsContainer{
+    opacity: 0;
+  }
+  #collegeContainer{
+    opacity: 0;
+  }
+  footer{
+    opacity: 0.5;
+    font-family: "Poppins", sans-serif;
+    margin-top: 15%;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: auto;
+  }
+  
